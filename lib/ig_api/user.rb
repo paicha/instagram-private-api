@@ -133,6 +133,7 @@ module IgApi
 
     def useragent
       format('Instagram %s Android(%s)', useragent_hash[:version], useragent_hash[:agent].rstrip)
+      'Instagram 35.0.0.20.96 Android (23/6.0.1; 640dpi; 1440x2560; samsung; SM-N9108V; trltechn; 95414346)'
     end
 
     def device_id
