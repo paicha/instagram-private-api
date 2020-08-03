@@ -71,7 +71,8 @@ module IgApi
 
       result = JSON.parse result.body, object_class: OpenStruct
 
-      if result.num_results > 0
+      result.users.select! { |user| user[:username] == username }
+      if result.users.size > 0
         user_result = result.users[0]
         user_object = IgApi::User.new username: username
         user_object.data = user_result
